@@ -1,1 +1,1 @@
-a = "I am package a! Fixed. Now update the minor."
+a = "I am package a! Fixed. Now update the patch."
