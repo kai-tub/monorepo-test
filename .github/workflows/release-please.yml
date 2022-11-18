@@ -8,6 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: google-github-actions/release-please-action@v3
+        id: release
         with:
           # probably equivalent to:
           # manifest-release which isn't deprecated yet?
@@ -19,3 +20,8 @@ jobs:
           # According to their documentation it looks like they are expecting
           # to continue the publication after this...
           # separate-pull-requests: true
+      - run: |
+          echo "A release was created"
+          echo ${{ steps.release.outputs.releases_created }}
+          echo ${{ contains(join(steps.release.outputs.releases_created, ';'),  package_a) }}
+        if: ${{ steps.release.outputs.releases_created }}
