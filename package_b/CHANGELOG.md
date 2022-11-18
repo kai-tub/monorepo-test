@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/kai-tub/monorepo-test/compare/package_b-v1.3.1...package_b-v1.4.0) (2022-11-18)
+
+
+### Features
+
+* Removed feature ([6b80252](https://github.com/kai-tub/monorepo-test/commit/6b802525ce6b00631936a9a3a7715ca61ca317ad))
+
 ## [1.3.1](https://github.com/kai-tub/monorepo-test/compare/package_b-v1.3.0...package_b-v1.3.1) (2022-11-18)
 
 
