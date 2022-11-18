@@ -10,6 +10,7 @@ jobs:
       - uses: google-github-actions/release-please-action@v3
         with:
           command: release-pr
+          release-type: python
           # Ensure that that I can release multiple packages form one repository
           monorepo-tags: true
           # https://github.com/google-github-actions/release-please-action#manifest-release-output
