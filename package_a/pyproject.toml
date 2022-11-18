@@ -1,6 +1,6 @@
 [project]
 name = "package_a"
-version = "0.3.2"
+version = "0.3.3"
 description = "\"Let's pretend this was already pre-loaded\""
 authors = [
     {name = "Kai Norman Clasen", email = "k.clasen@protonmail.com"},

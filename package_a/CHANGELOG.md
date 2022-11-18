@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.3](https://github.com/kai-tub/monorepo-test/compare/package_a-v0.3.2...package_a-v0.3.3) (2022-11-18)
+
+
+### Bug Fixes
+
+* bump patch yet again and again ([325d162](https://github.com/kai-tub/monorepo-test/commit/325d1622c2f820448921c0847d4651d86b11c006))
+
 ## [0.3.2](https://github.com/kai-tub/monorepo-test/compare/package_a-v0.3.1...package_a-v0.3.2) (2022-11-18)
 
 
