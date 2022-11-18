@@ -23,5 +23,5 @@ jobs:
       - run: |
           echo "A release was created"
           echo ${{ steps.release.outputs.releases_created }}
-          echo ${{ contains(join(steps.release.outputs.releases_created, ';'),  package_a) }}
+          echo ${{ contains(join(steps.release.outputs.releases_created, ';'),  'package_a') }}
         if: ${{ steps.release.outputs.releases_created }}
