@@ -9,7 +9,9 @@ jobs:
     steps:
       - uses: google-github-actions/release-please-action@v3
         with:
-          command: release-pr
+          # probably equivalent to:
+          # manifest-release which isn't deprecated yet?
+          command: manifest
           release-type: python
           # Ensure that that I can release multiple packages form one repository
           monorepo-tags: true
