@@ -1,0 +1,13 @@
+{
+    "packages": {
+        "package_a": {
+            "component": "package_a"
+        },
+        "package_b": {
+            "component": "package_b"
+        }
+    },
+    "release-type": "python",
+    "bump-minor-pre-major": true,
+    "separate-pull-requests": true
+}

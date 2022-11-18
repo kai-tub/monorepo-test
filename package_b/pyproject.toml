@@ -1,0 +1,15 @@
+[project]
+name = "package_b"
+version = "1.2.0"
+description = "\"Another packages that has been released\""
+authors = [
+    {name = "Kai Norman Clasen", email = "kai.ce.tub@gmail.com"},
+]
+dependencies = []
+requires-python = ">=3.10"
+readme = "README.md"
+license = {text = "MIT"}
+
+[build-system]
+requires = ["pdm-pep517>=1.0.0"]
+build-backend = "pdm.pep517.api"

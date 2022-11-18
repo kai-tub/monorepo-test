@@ -1,0 +1,18 @@
+on:
+  push:
+    branches:
+      - "main"
+name: release-please
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: google-github-actions/release-please-action@v3
+        with:
+          command: release-pr
+          # Ensure that that I can release multiple packages form one repository
+          monorepo-tags: true
+          # https://github.com/google-github-actions/release-please-action#manifest-release-output
+          # According to their documentation it looks like they are expecting
+          # to continue the publication after this...
+          # separate-pull-requests: true
