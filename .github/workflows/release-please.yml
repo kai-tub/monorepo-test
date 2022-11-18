@@ -22,6 +22,6 @@ jobs:
           # separate-pull-requests: true
       - run: |
           echo "A release was created"
-          echo ${{ toJSON(steps.release.outputs) }}
-          echo ${{ contains(join(steps.release.outputs, ';'),  'package_a') }}
+          echo ${{ toJSON(steps.release.outputs.paths_released ) }}
+          echo ${{ contains(steps.release.outputs.paths_released,  "package_a") }}
         if: ${{ steps.release.outputs.releases_created }}
