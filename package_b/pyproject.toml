@@ -5,11 +5,21 @@ description = "\"Another packages that has been released\""
 authors = [
     {name = "Kai Norman Clasen", email = "kai.ce.tub@gmail.com"},
 ]
-dependencies = []
+dependencies = [
+]
 requires-python = ">=3.10"
 readme = "README.md"
 license = {text = "MIT"}
+[project.optional-dependencies]
 
 [build-system]
 requires = ["pdm-pep517>=1.0.0"]
 build-backend = "pdm.pep517.api"
+
+[tool]
+[tool.pdm]
+
+[tool.pdm.dev-dependencies]
+docs = [
+    "-e file:///${PROJECT_ROOT}/../package-docs#egg=package-docs",
+]

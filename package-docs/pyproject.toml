@@ -1,0 +1,35 @@
+[project]
+name = "package-docs"
+version = "1.0.0"
+description = "Common documentation wrapper. Should NEVER be published"
+authors = [
+    {name = "Kai Norman Clasen", email = "kai.ce.tub@gmail.com"},
+]
+dependencies = [
+    "sphinx-autobuild>=2021.3.14",
+    "myst-nb>=0.17.1",
+    "furo>=2022.9.29",
+    "linkify-it-py>=2.0.0",
+    "sphinxcontrib-collections @ git+https://github.com/useblocks/sphinx-collections",
+]
+requires-python = ">=3.10"
+license = {text = "MIT"}
+[project.optional-dependencies]
+
+[build-system]
+requires = ["pdm-pep517>=1.0.0"]
+build-backend = "pdm.pep517.api"
+
+[tool]
+[tool.pdm]
+[tool.pdm.dev-dependencies]
+# technically, it would be best if I could guarantee that all packages share the
+# same documentation backend...
+# Wait... Maybe I can if I do the reverse!
+# Simply by making this package a dev dependency!
+# I am such a smart cookie :D
+docs = [
+    "-e file:///${PROJECT_ROOT}/../package_a#egg=package-a",
+    "-e file:///${PROJECT_ROOT}/../package_b#egg=package-b",
+    "sphinx-collections>=0.0.1",
+]

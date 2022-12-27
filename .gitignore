@@ -1,1 +1,4 @@
 .venv/
+# ignore all Sphinx build directories
+**/_build/*
+!**/_build/.nojekyll

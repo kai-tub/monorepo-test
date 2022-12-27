@@ -20,6 +20,12 @@ jobs:
           # According to their documentation it looks like they are expecting
           # to continue the publication after this...
           # separate-pull-requests: true
+      # 1. git checkout
+      # 2. Install PDM whenever a release is created
+      # 3. maybe build/test package publishing running it?
+      # 4. publish via PDM
+
+      # just for debugging purposes
       - run: |
           echo "A release was created"
           echo ${{ toJSON(steps.release.outputs.paths_released) }}
